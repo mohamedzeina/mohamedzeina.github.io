@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohamed Zeina | Software Engineer</title>
+  <meta name="description" content="Mohamed Zeina — Full-Stack Software Engineer & Embedded Systems Developer. MSc Computer Science, Sabancı University." />
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Mohamed Zeina | Software Engineer" />
+  <meta property="og:description" content="Full-Stack Engineer & Embedded Systems Developer. MSc CS (GPA 3.91), Sabancı University. Building everything from multi-drone systems to scalable web APIs." />
+  <meta property="og:url"         content="https://mohamedzeina.github.io" />
+  <meta name="twitter:card"       content="summary" />
+  <meta name="twitter:title"      content="Mohamed Zeina | Software Engineer" />
+  <meta name="twitter:description" content="Full-Stack Engineer & Embedded Systems Developer. MSc CS (GPA 3.91), Sabancı University." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">&lt; mzeina /&gt;</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about"><span class="nav-num">01.</span> About</a></li>
+        <li><a href="#experience"><span class="nav-num">02.</span> Experience</a></li>
+        <li><a href="#projects"><span class="nav-num">03.</span> Projects</a></li>
+        <li><a href="#contact"><span class="nav-num">04.</span> Contact</a></li>
+        <li><a href="Mohamed_Zeina_Resume (1).pdf" target="_blank" class="btn-resume">Resume <i class="fas fa-arrow-up-right-from-square"></i></a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+    <section id="hero">
+      <div class="hero-content">
+        <p class="hero-greeting"><span class="comment">// Hello, World!</span></p>
+        <h1 class="hero-name">Mohamed Zeina.</h1>
+        <h2 class="hero-subtitle">
+          <span id="typing-text"></span><span class="cursor" id="cursor">&#9646;</span>
+        </h2>
+        <p class="hero-bio">
+          MSc Computer Science graduate (GPA 3.91) with hands-on experience building everything from
+          multi-drone coordination systems to scalable web APIs. I write code that ships to production.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/mohamedzeina" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/mohamed--zeina" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:mohamed.zeina.cv@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-scroll-hint">
+        <span>scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+    <section id="about" class="section reveal">
+      <div class="container">
+        <h2 class="section-heading">
+          <span class="section-num">01.</span> About &amp; Skills
+          <span class="section-line"></span>
+        </h2>
+
+        <div class="about-wrapper">
+          <div class="about-text">
+            <p>
+              I'm a Software Engineer with an MSc in Computer Science &amp; Engineering from Sabancı University
+              (full scholarship, GPA 3.91/4.0). My work spans the full stack — from embedded Linux on
+              Raspberry Pi to React frontends and Python backends deployed on AWS.
+            </p>
+            <p>
+              My thesis combined GANs, SMOTE, and differential privacy to preserve household privacy
+              in smart meter data — an area where ML utility meets real-world privacy constraints.
+            </p>
+            <p>
+              I'm fluent in <span class="accent">Arabic</span> and <span class="accent">English</span>,
+              and I care deeply about writing clean, well-architected code that others can build on.
+            </p>
+          </div>
+
+          <div class="skills-container">
+            <div class="skill-group reveal-child">
+              <h3 class="skill-group-title"><i class="fas fa-code"></i> Languages</h3>
+              <div class="skill-tags">
+                <span class="tag tag-lang">C++</span>
+                <span class="tag tag-lang">Python</span>
+                <span class="tag tag-lang">JavaScript</span>
+                <span class="tag tag-lang">TypeScript</span>
+                <span class="tag tag-lang">Java</span>
+                <span class="tag tag-lang">C#</span>
+                <span class="tag tag-lang">SQL</span>
+              </div>
+            </div>
+            <div class="skill-group reveal-child">
+              <h3 class="skill-group-title"><i class="fas fa-layer-group"></i> Frameworks</h3>
+              <div class="skill-tags">
+                <span class="tag tag-front">React</span>
+                <span class="tag tag-front">Next.js</span>
+                <span class="tag tag-front">Redux</span>
+                <span class="tag tag-front">Tailwind CSS</span>
+                <span class="tag tag-back">Node.js</span>
+                <span class="tag tag-back">Express</span>
+                <span class="tag tag-back">FastAPI</span>
+                <span class="tag tag-back">Django</span>
+                <span class="tag tag-back">GraphQL</span>
+              </div>
+            </div>
+            <div class="skill-group reveal-child">
+              <h3 class="skill-group-title"><i class="fas fa-database"></i> Databases</h3>
+              <div class="skill-tags">
+                <span class="tag tag-db">MongoDB</span>
+                <span class="tag tag-db">PostgreSQL</span>
+                <span class="tag tag-db">MySQL</span>
+                <span class="tag tag-db">SQLite</span>
+                <span class="tag tag-db">Redis</span>
+              </div>
+            </div>
+            <div class="skill-group reveal-child">
+              <h3 class="skill-group-title"><i class="fas fa-cloud"></i> DevOps &amp; Cloud</h3>
+              <div class="skill-tags">
+                <span class="tag tag-devops">Docker</span>
+                <span class="tag tag-devops">Kubernetes</span>
+                <span class="tag tag-devops">Nginx</span>
+                <span class="tag tag-devops">AWS</span>
+                <span class="tag tag-devops">GCP</span>
+                <span class="tag tag-devops">CI/CD</span>
+                <span class="tag tag-devops">Git</span>
+              </div>
+            </div>
+            <div class="skill-group reveal-child">
+              <h3 class="skill-group-title"><i class="fas fa-microchip"></i> Embedded &amp; ML</h3>
+              <div class="skill-tags">
+                <span class="tag tag-embedded">Raspberry Pi</span>
+                <span class="tag tag-embedded">MAVLink</span>
+                <span class="tag tag-embedded">Embedded Linux</span>
+                <span class="tag tag-ml">YOLOv8</span>
+                <span class="tag tag-ml">OpenCV</span>
+                <span class="tag tag-ml">GANs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ EXPERIENCE ═══════════════════════════ -->
+    <section id="experience" class="section reveal">
+      <div class="container">
+        <h2 class="section-heading">
+          <span class="section-num">02.</span> Experience
+          <span class="section-line"></span>
+        </h2>
+
+        <div class="timeline">
+
+          <div class="timeline-item reveal-child">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="job-title">Embedded Systems &amp; Software Engineer</h3>
+                  <p class="job-company"><a href="#" class="company-link">Energco</a> &mdash; ZAIM Teknopark, Istanbul, TR</p>
+                </div>
+                <span class="job-date">Aug 2025 &ndash; Feb 2026</span>
+              </div>
+              <span class="job-type">Contract</span>
+              <ul class="job-bullets">
+                <li>Built a multi-drone system coordinating 5 UAVs with real-time 30 FPS video streaming, live telemetry via WebSockets, and fault-tolerant reconnection &amp; failsafe handling</li>
+                <li>Developed a Ground Control Station using <span class="accent">React</span> and <span class="accent">Python FastAPI</span> with real-time map interface, manual flight controls, and remote GPS navigation</li>
+                <li>Calculated target GPS coordinates from mother drone's gimbal angles, GPS, and rangefinder data to autonomously dispatch mini drones</li>
+                <li>Implemented <span class="accent">YOLOv8</span> object detection with PID-controlled flight for real-time subject tracking on mini drone video streams</li>
+                <li>Configured bridged wireless network between GCS and drones; set up embedded Linux on Raspberry Pi for video streaming and MAVLink communication</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal-child">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="job-title">Teaching Assistant — Introduction to Computing</h3>
+                  <p class="job-company"><a href="#" class="company-link">Sabancı University</a> &mdash; Istanbul, TR</p>
+                </div>
+                <span class="job-date">Sep 2021 &ndash; Jan 2024</span>
+              </div>
+              <ul class="job-bullets">
+                <li>Tutored 50+ students weekly in <span class="accent">C++</span> programming during recitations and office hours</li>
+                <li>Designed and evaluated 30+ assignments and exams, directly aligning assessment criteria with course learning objectives</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal-child">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="job-title">Full-Stack Software Engineer</h3>
+                  <p class="job-company"><a href="#" class="company-link">Interact Technologies</a> &mdash; Istanbul, TR</p>
+                </div>
+                <span class="job-date">Jul 2019 &ndash; Sep 2019</span>
+              </div>
+              <span class="job-type">Internship</span>
+              <ul class="job-bullets">
+                <li>Implemented reliable TCP/IP communication protocol, achieving <span class="accent">99.9%</span> data transmission success over network tests</li>
+                <li>Reduced GUI load time by <span class="accent">40%</span> through targeted code optimization</li>
+                <li>Designed a NoSQL document database schema supporting 500+ patient records and enabling downstream reporting</li>
+                <li>Designed 8 3D animations that decreased therapy learning time by <span class="accent">25%</span></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ EDUCATION ═══════════════════════════ -->
+    <section id="education" class="section reveal">
+      <div class="container">
+        <h2 class="section-heading">
+          Education
+          <span class="section-line"></span>
+        </h2>
+        <div class="edu-grid">
+          <div class="edu-card reveal-child">
+            <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="edu-body">
+              <h3 class="edu-degree">M.Sc. Computer Science &amp; Engineering</h3>
+              <p class="edu-school">Sabancı University</p>
+              <p class="edu-meta">Sep 2021 &ndash; Jan 2024 &nbsp;&bull;&nbsp; Istanbul, TR</p>
+              <div class="edu-highlights">
+                <span class="edu-badge">GPA: 3.91 / 4.0</span>
+                <span class="edu-badge">Full Scholarship</span>
+              </div>
+              <p class="edu-thesis"><span class="comment">// thesis:</span> Privacy-preserving ML framework combining GANs, SMOTE &amp; differential privacy for smart meter data</p>
+            </div>
+          </div>
+
+          <div class="edu-card reveal-child">
+            <div class="edu-icon"><i class="fas fa-university"></i></div>
+            <div class="edu-body">
+              <h3 class="edu-degree">B.Sc. Computer Science &amp; Engineering</h3>
+              <p class="edu-school">Sabancı University</p>
+              <p class="edu-meta">Sep 2016 &ndash; Jun 2020 &nbsp;&bull;&nbsp; Istanbul, TR</p>
+              <div class="edu-highlights">
+                <span class="edu-badge">GPA: 3.73 / 4.0</span>
+                <span class="edu-badge">Half Tuition Scholarship</span>
+                <span class="edu-badge">Degree of High Honor</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ PROJECTS ═══════════════════════════ -->
+    <section id="projects" class="section reveal">
+      <div class="container">
+        <h2 class="section-heading">
+          <span class="section-num">03.</span> Projects
+          <span class="section-line"></span>
+        </h2>
+
+        <div class="projects-grid">
+
+          <div class="project-card reveal-child">
+            <div class="project-top">
+              <i class="fas fa-folder-open project-icon"></i>
+              <div class="project-links">
+                <a href="https://github.com/mohamedzeina/NodeSocial" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Node Social</h3>
+            <p class="project-desc">
+              Scalable GraphQL API handling 1,000+ req/sec with JWT-based access control.
+              Features time-limited tokens, real-time access management, and image upload via Multer.
+            </p>
+            <div class="project-tags">
+              <span class="tag tag-back">Node.js</span>
+              <span class="tag tag-back">Express.js</span>
+              <span class="tag tag-back">GraphQL</span>
+              <span class="tag tag-db">MongoDB</span>
+              <span class="tag tag-front">React</span>
+              <span class="tag tag-lang">JWT</span>
+            </div>
+          </div>
+
+          <div class="project-card reveal-child">
+            <div class="project-top">
+              <i class="fas fa-folder-open project-icon"></i>
+              <div class="project-links">
+                <a href="https://github.com/mohamedzeina/multi-docker" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Multi-Docker Fibonacci Calculator</h3>
+            <p class="project-desc">
+              Microservices app containerized with Docker, orchestrated via Kubernetes, deployed to AWS Elastic Beanstalk.
+              Full CI/CD pipeline with Travis CI, production-grade RDS &amp; ElastiCache.
+            </p>
+            <div class="project-tags">
+              <span class="tag tag-devops">Docker</span>
+              <span class="tag tag-devops">Kubernetes</span>
+              <span class="tag tag-devops">AWS</span>
+              <span class="tag tag-devops">CI/CD</span>
+              <span class="tag tag-front">React</span>
+              <span class="tag tag-db">Redis</span>
+              <span class="tag tag-db">PostgreSQL</span>
+            </div>
+          </div>
+
+          <div class="project-card reveal-child">
+            <div class="project-top">
+              <i class="fas fa-folder-open project-icon"></i>
+              <div class="project-links">
+                <a href="https://github.com/mohamedzeina/jsnote-zeina" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">JSNote <span class="published-badge">NPM Published</span></h3>
+            <p class="project-desc">
+              Published <code class="inline-code">jsnote-zeina</code> to NPM — an in-browser code editor with live transpiling/bundling via ESBuild
+              and sandboxed execution. State managed with Redux/Immer, CLI-integrated.
+            </p>
+            <div class="project-tags">
+              <span class="tag tag-front">React</span>
+              <span class="tag tag-lang">TypeScript</span>
+              <span class="tag tag-lang">Redux</span>
+              <span class="tag tag-back">Express</span>
+              <span class="tag tag-lang">ESBuild</span>
+            </div>
+          </div>
+
+          <div class="project-card reveal-child">
+            <div class="project-top">
+              <i class="fas fa-folder-open project-icon"></i>
+              <div class="project-links">
+                <a href="https://github.com/mohamedzeina/discuss-nextjs" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Discuss App</h3>
+            <p class="project-desc">
+              Full-stack discussion platform with Next.js SSR, GitHub OAuth via Next-Auth, Zod validation, and memoized API routes
+              reducing query response time by <span class="accent">50%</span>.
+            </p>
+            <div class="project-tags">
+              <span class="tag tag-front">Next.js</span>
+              <span class="tag tag-lang">TypeScript</span>
+              <span class="tag tag-db">SQLite</span>
+              <span class="tag tag-lang">OAuth2</span>
+              <span class="tag tag-lang">Zod</span>
+            </div>
+          </div>
+
+          <div class="project-card reveal-child">
+            <div class="project-top">
+              <i class="fas fa-folder-open project-icon"></i>
+              <div class="project-links">
+                <a href="https://github.com/mohamedzeina/online-shop" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Online Shop</h3>
+            <p class="project-desc">
+              Full-stack e-commerce platform with Node.js/Express backend, CSRF protection, Stripe payment gateway,
+              bcryptjs authentication, and Mongoose ORM.
+            </p>
+            <div class="project-tags">
+              <span class="tag tag-back">Node.js</span>
+              <span class="tag tag-back">Express.js</span>
+              <span class="tag tag-db">MongoDB</span>
+              <span class="tag tag-lang">Stripe</span>
+              <span class="tag tag-lang">MVC</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+    <section id="contact" class="section reveal">
+      <div class="container">
+        <h2 class="section-heading">
+          <span class="section-num">04.</span> Contact
+          <span class="section-line"></span>
+        </h2>
+        <div class="contact-wrapper">
+          <p class="contact-label"><span class="comment">// let's connect</span></p>
+          <h3 class="contact-title">Get In Touch</h3>
+          <p class="contact-bio">
+            I'm currently open to new opportunities. Whether you have a question, a role in mind,
+            or just want to say hi — my inbox is always open.
+          </p>
+          <a href="mailto:mohamed.zeina.cv@gmail.com" class="btn btn-primary btn-large">
+            <i class="fas fa-paper-plane"></i> Say Hello
+          </a>
+          <div class="contact-socials">
+            <a href="https://github.com/mohamedzeina" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i> github.com/mohamedzeina
+            </a>
+            <a href="https://www.linkedin.com/in/mohamed--zeina" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin-in"></i> linkedin.com/in/mohamedzeina
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer class="footer">
+    <p>
+      <span class="comment">// </span>Designed &amp; built by
+      <a href="https://github.com/mohamedzeina" target="_blank" rel="noopener noreferrer">Mohamed Zeina</a>
+    </p>
+    <p class="footer-stack">HTML &bull; CSS &bull; JavaScript</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
