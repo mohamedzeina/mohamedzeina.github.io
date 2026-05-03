@@ -810,8 +810,7 @@ img {
   content: attr(data-tooltip);
   position: absolute;
   top: calc(100% + 6px);
-  left: 50%;
-  transform: translateX(-50%);
+  right: 0;
   background: var(--surface2);
   color: var(--text);
   font-size: 0.7rem;
