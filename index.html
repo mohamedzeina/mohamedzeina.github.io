@@ -31,7 +31,7 @@
         <li><a href="#experience"><span class="nav-num">02.</span> Experience</a></li>
         <li><a href="#projects"><span class="nav-num">03.</span> Projects</a></li>
         <li><a href="#contact"><span class="nav-num">04.</span> Contact</a></li>
-        <li><a href="Mohamed_Zeina_Resume (1).pdf" target="_blank" class="btn-resume">Resume <i class="fas fa-arrow-up-right-from-square"></i></a></li>
+        <li><a href="resume.pdf" target="_blank" class="btn-resume">Resume <i class="fas fa-arrow-up-right-from-square"></i></a></li>
       </ul>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -293,12 +293,15 @@
                 <a href="https://github.com/mohamedzeina/NodeSocial" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <i class="fab fa-github"></i>
                 </a>
+                <a href="https://node-social-chi.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Live Demo">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
               </div>
             </div>
             <h3 class="project-title">Node Social</h3>
             <p class="project-desc">
-              Scalable GraphQL API handling 1,000+ req/sec with JWT-based access control.
-              Features time-limited tokens, real-time access management, and image upload via Multer.
+              GraphQL API with JWT authentication, paginated post feeds, and image upload via Multer and Cloudinary.
+              Features post/comment CRUD with ownership checks, time-limited tokens with automatic client-side expiry, and real-time notifications with Socket.io.
             </p>
             <div class="project-tags">
               <span class="tag tag-back">Node.js</span>
@@ -307,6 +310,7 @@
               <span class="tag tag-db">MongoDB</span>
               <span class="tag tag-front">React</span>
               <span class="tag tag-lang">JWT</span>
+              <span class="tag tag-back">Socket.io</span>
             </div>
           </div>
 
@@ -346,8 +350,8 @@
             </div>
             <h3 class="project-title">JSNote <span class="published-badge">NPM Published</span></h3>
             <p class="project-desc">
-              Published <code class="inline-code">jsnote-zeina</code> to NPM — an in-browser code editor with live transpiling/bundling via ESBuild
-              and sandboxed execution. State managed with Redux/Immer, CLI-integrated.
+              Published <code class="inline-code">jsnote-zeina</code> to npm as a CLI tool that runs a local Express server serving a React-based JavaScript notebook app.
+              In-browser bundling via esbuild WASM with dynamic npm resolution from unpkg.com, sandboxed iframe execution, and cumulative cell scope sharing across the notebook.
             </p>
             <div class="project-tags">
               <span class="tag tag-front">React</span>
@@ -365,17 +369,21 @@
                 <a href="https://github.com/mohamedzeina/discuss-nextjs" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <i class="fab fa-github"></i>
                 </a>
+                <a href="https://discuss-nextjs-drab.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Live Demo">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
               </div>
             </div>
             <h3 class="project-title">Discuss App</h3>
             <p class="project-desc">
-              Full-stack discussion platform with Next.js SSR, GitHub OAuth via Next-Auth, Zod validation, and memoized API routes
-              reducing query response time by <span class="accent">50%</span>.
+              Full-stack discussion platform with nested comment threads, GitHub OAuth, and server-side form validation with Zod.
+              Built with Next.js App Router using React Server Components, Suspense streaming, and request memoization to deduplicate DB queries within a render.
             </p>
             <div class="project-tags">
               <span class="tag tag-front">Next.js</span>
               <span class="tag tag-lang">TypeScript</span>
-              <span class="tag tag-db">SQLite</span>
+              <span class="tag tag-db">PostgreSQL</span>
+              <span class="tag tag-lang">Prisma</span>
               <span class="tag tag-lang">OAuth2</span>
               <span class="tag tag-lang">Zod</span>
             </div>

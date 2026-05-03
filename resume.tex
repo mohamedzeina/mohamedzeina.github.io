@@ -1,11 +1,10 @@
 %-------------------------
 % Resume in Latex
 % Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -20,52 +19,34 @@
 \usepackage{tabularx}
 \input{glyphtounicode}
 
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+% Tighter margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.65in}
+\addtolength{\textheight}{1.3in}
 
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-6pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
+  \item\small{{#1 \vspace{-2pt}}}
 }
 
 \newcommand{\resumeSubheading}[4]{
@@ -73,13 +54,6 @@
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -91,81 +65,54 @@
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \begin{document}
 
 %----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-
 \begin{center}
     \textbf{\Huge \scshape Mohamed Zeina} \\ \vspace{1pt}
-    \small +90 552 511 1730  $|$ \href{mailto:mohamed.zeina.cv@gmail.com}{\underline{mohamed.zeina.cv@gmail.com}} $|$
+    \small +90 552 511 1730 $|$
+    \href{mailto:mohamed.zeina.cv@gmail.com}{\underline{mohamed.zeina.cv@gmail.com}} $|$
     \href{https://www.linkedin.com/in/mohamed--zeina}{\underline{linkedin.com/in/mohamedzeina}} $|$
     \href{https://github.com/mohamedzeina}{\underline{github.com/mohamedzeina}} $|$
     \href{https://mohamedzeina.github.io}{\underline{mohamedzeina.github.io}}
 \end{center}
 
-
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
 
-   \resumeSubheading
-{Embedded Systems \& Software Engineer (Contract)}{August 2025 -- Feb. 2026}
-{Energco, ZAIM Teknopark}{Istanbul, TR}
-\resumeItemListStart
-    \resumeItem{Built a multi-drone system coordinating 5 UAVs with real-time 30 FPS video streaming, live telemetry via WebSockets, and fault-tolerant reconnection and failsafe handling}
-    \resumeItem{Developed a Ground Control Station using React and Python FastAPI with real-time map interface, manual flight controls, and remote GPS navigation}
-    \resumeItem{Calculated target GPS coordinates from mother drone's gimbal angles, GPS, and rangefinder data to autonomously dispatch mini drones}
-    \resumeItem{Implemented YOLOv8 object detection with PID-controlled flight for real-time subject tracking on mini drone video streams}
-    \resumeItem{Configured bridged wireless network between GCS and drones, and set up embedded Linux on Raspberry Pi for video streaming and MAVLink communication}
-\resumeItemListEnd
-
-
-
+    \resumeSubheading
+      {Embedded Systems \& Software Engineer (Contract)}{August 2025 -- Feb. 2026}
+      {Energco, ZAIM Teknopark}{Istanbul, TR}
+      \resumeItemListStart
+        \resumeItem{Built a multi-drone system coordinating 5 UAVs with real-time 30 FPS video streaming, live telemetry via WebSockets, and fault-tolerant reconnection and failsafe handling}
+        \resumeItem{Developed a Ground Control Station using React and Python FastAPI with real-time map interface, manual flight controls, and remote GPS navigation}
+        \resumeItem{Implemented YOLOv8 object detection with PID-controlled flight for real-time subject tracking; calculated target GPS from gimbal angles, GPS, and rangefinder data to autonomously dispatch mini drones}
+        \resumeItem{Configured bridged wireless network between GCS and drones; set up embedded Linux on Raspberry Pi for video streaming and MAVLink communication}
+      \resumeItemListEnd
 
     \resumeSubheading
       {Teaching Assistant for Introduction to Computing}{Sep. 2021 -- Jan. 2024}
       {Sabancı University}{Istanbul, TR}
       \resumeItemListStart
-        \resumeItem{Tutored over 50 students weekly in C++ programming during recitations and office hours}
-        \resumeItem{Designed and evaluated 30+ assignments and exams for Introduction to Computing (C++), directly aligning assessment criteria with course learning objectives}
+        \resumeItem{Tutored over 50 students weekly in C++ programming; designed and evaluated 30+ assignments and exams aligned with course learning objectives}
       \resumeItemListEnd
-
-      
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
 
     \resumeSubheading
       {Full Stack Software Engineer Intern}{July 2019 -- Sep. 2019}
       {Interact Technologies}{Istanbul, TR}
       \resumeItemListStart
-        \resumeItem{Implemented reliable TCP/IP communication protocol, achieving 99.9\% data transmission success over network tests}
-        \resumeItem{Reduced GUI load time by 40\% through code optimization}
-        \resumeItem{Designed and implemented a NoSQL document database schema to store and retrieve structured therapy session records, supporting 500+ patient records and enabling downstream reporting}
-        \resumeItem{Designed 8 3D animations that decreased therapy learning time by 25\%}
-    \resumeItemListEnd
+        \resumeItem{Implemented TCP/IP protocol achieving 99.9\% data transmission success and reduced GUI load time by 40\% through code optimization}
+        \resumeItem{Designed a NoSQL document database schema supporting 500+ patient records, enabling downstream reporting}
+      \resumeItemListEnd
+
   \resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------
@@ -173,89 +120,58 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Sabancı University}{Istanbul, TR}
-       {Master of Science in Computer Science and Engineering (with thesis) (M.Sc.CSE)}{Sep. 2021 -- Jan. 2024}
-    \resumeItemListStart
-        \resumeItem{GPA: 3.91/4.0}
-        \resumeItem{Full Scholarship}
-        \resumeItem{Thesis: Built a framework combining GANs, SMOTE, and differential privacy to preserve household privacy in smart meter data while maintaining machine learning model utility} 
-    \resumeItemListEnd
-     
+      {Master of Science in Computer Science and Engineering (M.Sc.CSE)}{Sep. 2021 -- Jan. 2024}
+      \resumeItemListStart
+        \resumeItem{GPA: 3.91/4.0 $|$ Full Scholarship $|$ Thesis: Built a framework combining GANs, SMOTE, and differential privacy to preserve household privacy in smart meter data}
+      \resumeItemListEnd
+
     \resumeSubheading
       {Sabancı University}{Istanbul, TR}
       {Bachelor of Computer Science and Engineering (B.Sc.CSE)}{Sep. 2016 -- June 2020}
-       \resumeItemListStart
-        \resumeItem{GPA: 3.73/4.0}
-        \resumeItem{Half Tuition Scholarship}
-        \resumeItem{Degree of High Honor (2016-2017, 2018-2020)}
-    \resumeItemListEnd
+      \resumeItemListStart
+        \resumeItem{GPA: 3.73/4.0 $|$ Half Tuition Scholarship $|$ Degree of High Honor (2016--2017, 2018--2020)}
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
-
-
 
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\href{https://github.com/mohamedzeina/NodeSocial}{\textbf{\underline{Node Social}}} $|$ \emph{Node.js, Express.js, MongoDB, GraphQL, JWT, React}}{}
-          \resumeItemListStart
-            \resumeItem{Built and deployed scalable GraphQL API handling 1,000+ simulated requests/sec with JWT-based access control}
-            \resumeItem{Implemented time-limited token authentication and real-time access control for post management}
-            \resumeItem{Developed image upload functionality with database integration using Multer }
-          \resumeItemListEnd
-    \newpage
+    {\href{https://node-social-chi.vercel.app}{\textbf{\underline{Node Social}}} $|$ \href{https://github.com/mohamedzeina/NodeSocial}{\underline{GitHub}} $|$ \emph{Node.js, Express.js, MongoDB, GraphQL, JWT, Cloudinary, React}}{}
+    \resumeItemListStart
+        \resumeItem{Built a GraphQL API with JWT authentication, server-side input validation, paginated post feeds, and image upload via Multer and Cloudinary}
+        \resumeItem{Implemented ownership-enforced CRUD mutations, time-limited tokens with automatic client-side expiry, and real-time communication with Socket.io}
+    \resumeItemListEnd
+
+
       \resumeProjectHeading
-          {\href{https://github.com/mohamedzeina/multi-docker}{\textbf{\underline{Multi-Docker Fibonacci Calculator}}} $|$ \emph{Docker, React, Node.js, Redis, PostgreSQL, AWS}}{}
-          \resumeItemListStart
-            \resumeItem{Developed a full-stack microservices app to calculate Fibonacci numbers using React (client), Express (API), Redis, and PostgreSQL}
-            \resumeItem{Containerized all components with Docker, orchestrated deployments via Kubernetes, and routed traffic through NGINX}
-            \resumeItem{Implemented CI/CD pipeline with Travis CI to test, build, push Docker images to Docker Hub, and auto-deploy to AWS Elastic Beanstalk}
-            \resumeItem{Used AWS RDS and ElastiCache for production-grade PostgreSQL and Redis; integrated Skaffold for live-reload development}
-          \resumeItemListEnd
+        {\href{https://discuss-nextjs-drab.vercel.app}{\textbf{\underline{Discuss App}}} $|$ \href{https://github.com/mohamedzeina/discuss-nextjs}{\underline{GitHub}} $|$ \emph{Next.js, PostgreSQL, NextAuth, NextUI, Prisma, Zod}}{}
+        \resumeItemListStart
+          \resumeItem{Built and deployed a full-stack discussion platform with nested comment threads, GitHub OAuth, and server-side form validation with Zod}
+          \resumeItem{Used Next.js App Router with React Server Components, Suspense streaming, and request memoization to deduplicate DB queries within a render}
+        \resumeItemListEnd
+
       \resumeProjectHeading
-          {\href{https://github.com/mohamedzeina/online-shop}{\textbf{\underline{Online Shop}}} $|$ \emph{Node.js, Express.js, MongoDB, MVC, EJS, Stripe}}{}
-          \resumeItemListStart
-            \resumeItem{Developed a full-stack e-commerce platform with Node.js/Express.js backend and EJS frontend}
-            \resumeItem{Enhanced security with CSRF protection and integrated Stripe payment gateway}
-            \resumeItem{Utilized MongoDB with Mongoose for data management and implemented secure authentication with bcryptjs} 
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\href{https://github.com/mohamedzeina/jsnote-zeina}{\textbf{\underline{JSNote}}} $|$ \emph{React, TypeScript, ESBuild, Redux, Express, Immer, Lerna, CLI}}{}
-          \resumeItemListStart
-            \resumeItem{Published \texttt{jsnote-zeina} to NPM — used by developers as a standalone in-browser code editor}
-            \resumeItem{Created in-browser coding environment with live transpiling/bundling and sandboxed execution}
-            \resumeItem{Managed application state with Redux/Immer and implemented API server with CLI integration}
-          \resumeItemListEnd
-      \resumeProjectHeading
-      {\href{https://github.com/mohamedzeina/discuss-nextjs}{\textbf{\underline{Discuss App}}} $|$ \emph{Next.js, SQLite, Next-Auth, Next-UI, Zod}}{}
-      \resumeItemListStart
-        \resumeItem{Built a full-stack discussion platform using Next.js with server-side rendering and SQLite as a lightweight embedded DB}
-        \resumeItem{Implemented GitHub OAuth authentication using Next-Auth for secure user login and session management}
-        \resumeItem{Designed responsive, accessible UI using Next-UI components with loading skeletons and modals for improved UX}
-        \resumeItem{Validated user input with Zod and optimized API routes with memoization, reducing query response time by 50\%}
-      \resumeItemListEnd
+    {\href{https://github.com/mohamedzeina/jbook}{\textbf{\underline{JSNote}}} $|$ \emph{React, TypeScript, ESBuild WASM, Redux, Immer, Express, Lerna, CLI}}{}
+    \resumeItemListStart
+      \resumeItem{Published \texttt{jsnote-zeina} to npm as a CLI tool; runs a local Express server serving a React-based JavaScript notebook app}
+      \resumeItem{Implemented in-browser bundling via esbuild WASM with dynamic npm resolution from unpkg.com, sandboxed iframe execution, and cumulative cell scope sharing across the notebook}
+    \resumeItemListEnd
+
     \resumeSubHeadingListEnd
 
-
-
-%
-%-----------PROGRAMMING SKILLS-----------
+%-----------SKILLS-----------
+%-----------SKILLS-----------
 \section{Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Programming Languages}{: C++, C\#, Python, Java, JavaScript, TypeScript, SQL} \\
-     \textbf{Frameworks \& Libraries}{: React, Redux, Next.js, Node.js, Express, Django, Deno, Mongoose, GraphQL, EJS, JWT, OAuth2} \\
-     \textbf{Web Technologies}{: HTML, CSS, Tailwind CSS, RESTful APIs, WebSockets} \\
-     \textbf{Databases}{: MongoDB, PostgreSQL, MySQL, SQLite, Redis} \\
-     \textbf{DevOps \& Infrastructure}{: Docker, Nginx, AWS (EC2, RDS, S3, IAM), Google Cloud (GKE)} \\
-     \textbf{Developer Tools}{: Git, GitHub, CI/CD (GitHub Actions, Travis CI)} \\
-     \textbf{Spoken Languages}{: Arabic (Native), English (Fluent)} \\ 
-     \textbf{Embedded \& IoT}{: Raspberry Pi, MAVLink, UDP Streaming, Wireless Networking} \\
-    \textbf{Computer Vision}{: OpenCV, YOLOv8, Object Tracking} \\
-    
-     
+     \textbf{Languages}{: C++, C\#, Python, Java, JavaScript, TypeScript, SQL} \\
+     \textbf{Frameworks \& Libraries}{: React, Redux, Next.js, Node.js, Express, Mongoose, GraphQL, Prisma, Socket.io} \\
+     \textbf{Web \& Databases}{: Tailwind CSS, RESTful APIs, WebSockets, MongoDB, PostgreSQL, SQLite, Redis} \\
+     \textbf{DevOps}{: Docker, Nginx, Kubernetes, AWS (EC2, RDS, S3), Google Cloud (GKE), CI/CD (GitHub Actions, Travis CI)} \\
+     \textbf{Embedded \& CV}{: Raspberry Pi, MAVLink, UDP Streaming, OpenCV, YOLOv8} \\
+     \textbf{Spoken}{: Arabic (Native), English (Fluent)}
     }}
  \end{itemize}
 
-
-%-------------------------------------------
 \end{document}
