@@ -16,7 +16,7 @@
   <meta name="twitter:description" content="Full-Stack Engineer & Embedded Systems Developer. MSc CS (GPA 3.91), Sabancı University." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -105,34 +105,36 @@
               <h3 class="skill-group-title"><i class="fas fa-code"></i> Languages</h3>
               <div class="skill-tags">
                 <span class="tag tag-lang">C++</span>
+                <span class="tag tag-lang">C#</span>
                 <span class="tag tag-lang">Python</span>
+                <span class="tag tag-lang">Java</span>
                 <span class="tag tag-lang">JavaScript</span>
                 <span class="tag tag-lang">TypeScript</span>
-                <span class="tag tag-lang">Java</span>
-                <span class="tag tag-lang">C#</span>
                 <span class="tag tag-lang">SQL</span>
               </div>
             </div>
             <div class="skill-group reveal-child">
-              <h3 class="skill-group-title"><i class="fas fa-layer-group"></i> Frameworks</h3>
+              <h3 class="skill-group-title"><i class="fas fa-layer-group"></i> Frameworks &amp; Libraries</h3>
               <div class="skill-tags">
                 <span class="tag tag-front">React</span>
-                <span class="tag tag-front">Next.js</span>
                 <span class="tag tag-front">Redux</span>
-                <span class="tag tag-front">Tailwind CSS</span>
+                <span class="tag tag-front">Next.js</span>
                 <span class="tag tag-back">Node.js</span>
                 <span class="tag tag-back">Express</span>
-                <span class="tag tag-back">FastAPI</span>
-                <span class="tag tag-back">Django</span>
+                <span class="tag tag-back">Mongoose</span>
                 <span class="tag tag-back">GraphQL</span>
+                <span class="tag tag-back">Prisma</span>
+                <span class="tag tag-back">Socket.io</span>
               </div>
             </div>
             <div class="skill-group reveal-child">
-              <h3 class="skill-group-title"><i class="fas fa-database"></i> Databases</h3>
+              <h3 class="skill-group-title"><i class="fas fa-globe"></i> Web &amp; Databases</h3>
               <div class="skill-tags">
+                <span class="tag tag-front">Tailwind CSS</span>
+                <span class="tag tag-lang">RESTful APIs</span>
+                <span class="tag tag-lang">WebSockets</span>
                 <span class="tag tag-db">MongoDB</span>
                 <span class="tag tag-db">PostgreSQL</span>
-                <span class="tag tag-db">MySQL</span>
                 <span class="tag tag-db">SQLite</span>
                 <span class="tag tag-db">Redis</span>
               </div>
@@ -141,23 +143,22 @@
               <h3 class="skill-group-title"><i class="fas fa-cloud"></i> DevOps &amp; Cloud</h3>
               <div class="skill-tags">
                 <span class="tag tag-devops">Docker</span>
-                <span class="tag tag-devops">Kubernetes</span>
                 <span class="tag tag-devops">Nginx</span>
+                <span class="tag tag-devops">Kubernetes</span>
                 <span class="tag tag-devops">AWS</span>
-                <span class="tag tag-devops">GCP</span>
-                <span class="tag tag-devops">CI/CD</span>
-                <span class="tag tag-devops">Git</span>
+                <span class="tag tag-devops">Google Cloud</span>
+                <span class="tag tag-devops">GitHub Actions</span>
+                <span class="tag tag-devops">Travis CI</span>
               </div>
             </div>
             <div class="skill-group reveal-child">
-              <h3 class="skill-group-title"><i class="fas fa-microchip"></i> Embedded &amp; ML</h3>
+              <h3 class="skill-group-title"><i class="fas fa-microchip"></i> Embedded &amp; CV</h3>
               <div class="skill-tags">
                 <span class="tag tag-embedded">Raspberry Pi</span>
                 <span class="tag tag-embedded">MAVLink</span>
-                <span class="tag tag-embedded">Embedded Linux</span>
-                <span class="tag tag-ml">YOLOv8</span>
+                <span class="tag tag-embedded">UDP Streaming</span>
                 <span class="tag tag-ml">OpenCV</span>
-                <span class="tag tag-ml">GANs</span>
+                <span class="tag tag-ml">YOLOv8</span>
               </div>
             </div>
           </div>
@@ -376,8 +377,8 @@
             </div>
             <h3 class="project-title">Discuss App</h3>
             <p class="project-desc">
-              Full-stack discussion platform with nested comment threads, GitHub OAuth, and server-side form validation with Zod.
-              Built with Next.js App Router using React Server Components, Suspense streaming, and request memoization to deduplicate DB queries within a render.
+              Full-stack Reddit-style platform with GitHub OAuth, nested comment threads, soft/hard delete with reply-aware logic, and ownership-enforced server actions with Zod validation.
+              Built with Next.js App Router using React Server Components, Suspense streaming for independent post and comment loading, and React <code class="inline-code">cache()</code> to deduplicate DB queries within a render.
             </p>
             <div class="project-tags">
               <span class="tag tag-front">Next.js</span>
@@ -393,26 +394,26 @@
             <div class="project-top">
               <i class="fas fa-folder-open project-icon"></i>
               <div class="project-links">
-                <a href="https://github.com/mohamedzeina/online-shop" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <a href="https://github.com/mohamedzeina/noblecart" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <i class="fab fa-github"></i>
                 </a>
-                <a href="https://online-shop-luts.onrender.com" target="_blank" rel="noopener noreferrer" aria-label="Live Demo" data-tooltip="Live Demo">
+                <a href="https://noblecart.onrender.com" target="_blank" rel="noopener noreferrer" aria-label="Live Demo" data-tooltip="Live Demo">
                   <i class="fas fa-arrow-up-right-from-square"></i>
                 </a>
               </div>
             </div>
-            <h3 class="project-title">Online Shop</h3>
+            <h3 class="project-title">Noblecart</h3>
             <p class="project-desc">
-              Full-stack MVC e-commerce app with session-based auth, bcrypt password hashing, CSRF protection, and role-scoped admin controls with Cloudinary image storage.
-              Integrated Stripe Checkout for payments, PDFKit for invoice generation, and a live cart with real-time quantity controls and toast feedback.
+              Full-stack MVC e-commerce app with session-based auth, bcrypt, CSRF protection, Helmet security headers, and role-scoped admin controls with Cloudinary image and GLB 3D model storage.
+              Features an interactive Three.js 3D product viewer with OrbitControls, a slide-out cart drawer via Fetch API, Stripe Checkout for payments, and server-side PDF invoice generation.
             </p>
             <div class="project-tags">
               <span class="tag tag-back">Node.js</span>
               <span class="tag tag-back">Express.js</span>
               <span class="tag tag-db">MongoDB</span>
+              <span class="tag tag-front">Three.js</span>
               <span class="tag tag-lang">Stripe</span>
               <span class="tag tag-lang">EJS</span>
-              <span class="tag tag-lang">PDFKit</span>
             </div>
           </div>
 
