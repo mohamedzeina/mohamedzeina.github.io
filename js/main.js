@@ -70,7 +70,7 @@ function updateProgress() {
 }
 
 
-/* ─── navbar scroll behaviour + active link spy ──── */
+/* ─── navbar scroll behaviour + scroll progress ──── */
 const navbar = document.getElementById('navbar');
 const navLinksAll = document.querySelectorAll('.nav-links li a:not(.btn-resume)');
 const sections = document.querySelectorAll('section[id]');
@@ -81,23 +81,39 @@ function onScroll() {
   } else {
     navbar.classList.remove('scrolled');
   }
-
-  // Active link via scroll spy
-  let currentId = '';
-  sections.forEach(section => {
-    const top = section.offsetTop - 140;
-    if (window.scrollY >= top) {
-      currentId = section.getAttribute('id');
-    }
-  });
-  navLinksAll.forEach(link => {
-    link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`);
-  });
-
   updateProgress();
 }
-window.addEventListener('scroll', onScroll, { passive: true });
+
+let scrollTicking = false;
+window.addEventListener('scroll', () => {
+  if (scrollTicking) return;
+  scrollTicking = true;
+  requestAnimationFrame(() => {
+    onScroll();
+    scrollTicking = false;
+  });
+}, { passive: true });
 onScroll();
+
+
+/* ─── active link spy via IntersectionObserver ───── */
+const linkByHash = new Map();
+navLinksAll.forEach(link => {
+  const href = link.getAttribute('href') || '';
+  if (href.startsWith('#') && href.length > 1) linkByHash.set(href.slice(1), link);
+});
+
+const spyObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const link = linkByHash.get(entry.target.id);
+    if (!link) return;
+    navLinksAll.forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
+
+sections.forEach(section => spyObserver.observe(section));
 
 
 /* ─── mobile nav toggle ──────────────────────────── */
@@ -136,6 +152,12 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 
 /* ─── stat counter (animates on enter) ───────────── */
+function formatStat(value, target) {
+  const t = target !== undefined ? target : value;
+  if (String(t).includes('.')) return value.toFixed(2);
+  return Math.floor(value).toString();
+}
+
 const statObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
@@ -153,10 +175,8 @@ const statObserver = new IntersectionObserver((entries) => {
     const start = performance.now();
     function step(now) {
       const t = Math.min((now - start) / duration, 1);
-      // ease-out cubic
       const eased = 1 - Math.pow(1 - t, 3);
-      const v = target * eased;
-      el.textContent = formatStat(v, target);
+      el.textContent = formatStat(target * eased, target);
       if (t < 1) requestAnimationFrame(step);
       else el.textContent = formatStat(target);
     }
@@ -164,13 +184,6 @@ const statObserver = new IntersectionObserver((entries) => {
     statObserver.unobserve(el);
   });
 }, { threshold: 0.5 });
-
-function formatStat(value, target) {
-  // if target had decimal, keep 2dp
-  const t = target !== undefined ? target : value;
-  if (String(t).includes('.')) return value.toFixed(2);
-  return Math.floor(value).toString();
-}
 
 document.querySelectorAll('.stat-num').forEach(el => statObserver.observe(el));
 
@@ -190,7 +203,6 @@ if (cursorDot && cursorRing && supportsHover && !reducedMotion) {
   window.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
     if (!active) {
       document.body.classList.add('cursor-active');
       active = true;
@@ -202,8 +214,8 @@ if (cursorDot && cursorRing && supportsHover && !reducedMotion) {
     active = false;
   });
 
-  // ring follows with lerp easing
   function tick() {
+    cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
     ringX += (mouseX - ringX) * 0.18;
     ringY += (mouseY - ringY) * 0.18;
     cursorRing.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
