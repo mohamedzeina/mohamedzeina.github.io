@@ -264,6 +264,7 @@
                 <span class="tag tag-front">React</span>
                 <span class="tag tag-front">Redux</span>
                 <span class="tag tag-front">Next.js</span>
+                <span class="tag tag-front">Vite</span>
                 <span class="tag tag-back">Node.js</span>
                 <span class="tag tag-back">Express</span>
                 <span class="tag tag-back">Mongoose</span>
@@ -290,6 +291,29 @@
             <div class="skill-group reveal-child">
               <div class="skill-head">
                 <span class="skill-idx">04</span>
+                <h3 class="skill-group-title"><i class="fas fa-vial"></i> TESTING</h3>
+              </div>
+              <div class="skill-tags">
+                <span class="tag tag-lang">Vitest</span>
+                <span class="tag tag-lang">Playwright</span>
+                <span class="tag tag-lang">Jest</span>
+              </div>
+            </div>
+            <div class="skill-group reveal-child">
+              <div class="skill-head">
+                <span class="skill-idx">05</span>
+                <h3 class="skill-group-title"><i class="fas fa-robot"></i> AI TOOLING</h3>
+              </div>
+              <div class="skill-tags">
+                <span class="tag tag-ml">Claude Code</span>
+                <span class="tag tag-ml">Multi-agent Orchestration</span>
+                <span class="tag tag-ml">Prompt Engineering</span>
+                <span class="tag tag-ml">LLM Integration</span>
+              </div>
+            </div>
+            <div class="skill-group reveal-child">
+              <div class="skill-head">
+                <span class="skill-idx">06</span>
                 <h3 class="skill-group-title"><i class="fas fa-cloud"></i> DEVOPS &amp; CLOUD</h3>
               </div>
               <div class="skill-tags">
@@ -304,7 +328,7 @@
             </div>
             <div class="skill-group reveal-child">
               <div class="skill-head">
-                <span class="skill-idx">05</span>
+                <span class="skill-idx">07</span>
                 <h3 class="skill-group-title"><i class="fas fa-microchip"></i> EMBEDDED &amp; CV</h3>
               </div>
               <div class="skill-tags">
@@ -583,15 +607,17 @@
             </div>
             <h3 class="project-title">JSNote <span class="published-badge">NPM</span></h3>
             <p class="project-desc">
-              Published <code class="inline-code">jsnote-zeina</code> to npm as a CLI tool that runs a local Express server serving a React-based JavaScript notebook app.
-              In-browser bundling via esbuild WASM with dynamic npm resolution from unpkg.com, sandboxed iframe execution, and cumulative cell scope sharing across the notebook.
+              Published <code class="inline-code">jsnote-zeina</code> to npm as a CLI-distributed in-browser JS/JSX notebook with Monaco IntelliSense via <code class="inline-code">@typescript/ata</code>, esbuild-wasm bundling with unpkg npm resolution, sandboxed iframe execution, and cumulative cell scope sharing.
+              Architected as a three-package npm workspace with Redux/Immer state, debounced persistence, multi-notebook directory mode, find/replace, pinned cells, runtime-error cell attribution via source-map-js, and Vitest + Playwright test coverage.
             </p>
             <div class="project-tags">
               <span class="tag tag-front">React</span>
               <span class="tag tag-lang">TypeScript</span>
+              <span class="tag tag-front">Vite</span>
+              <span class="tag tag-lang">esbuild-wasm</span>
+              <span class="tag tag-front">Monaco</span>
               <span class="tag tag-lang">Redux</span>
               <span class="tag tag-back">Express</span>
-              <span class="tag tag-lang">ESBuild</span>
             </div>
           </article>
 

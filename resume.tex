@@ -182,30 +182,33 @@
 
  
 
-        \resumeProjectHeading
-          {\textbf{{JSNote}} $|$ \href{https://github.com/mohamedzeina/jbook}{\uline{GitHub}} $|$ \emph{React, TypeScript, ESBuild WASM,
-  Redux, Immer, Express, Lerna, CLI}}{}
-          \resumeItemListStart
-            \resumeItem{Published \texttt{jsnote-zeina} to npm as a CLI tool; runs a local Express server serving a React-based JavaScript
-  notebook app}
-            \resumeItem{Implemented in-browser bundling via esbuild WASM with dynamic npm resolution from unpkg.com, sandboxed iframe execution,
-   and cumulative cell scope sharing across the notebook}
-          \resumeItemListEnd
+      \resumeProjectHeading
+            {\textbf{{JSNote}} $|$ \href{https://github.com/mohamedzeina/jsnote-zeina}{\uline{GitHub}} $|$ \emph{React, TypeScript, Vite, esbuild-wasm, Monaco,
+  Redux, Immer, Express, npm workspaces}}{}
+            \resumeItemListStart
+              \resumeItem{Published \texttt{jsnote-zeina} to npm as a CLI-distributed in-browser JS/JSX notebook with Monaco IntelliSense via
+  \texttt{@typescript/ata}, esbuild-wasm bundling with unpkg npm resolution, sandboxed iframe execution, and cumulative cell scope sharing}
+              \resumeItem{Architected as a three-package npm workspace with Redux/Immer state, debounced persistence, multi-notebook directory mode,
+  find/replace, pinned cells, runtime-error cell attribution via source-map-js, and Vitest + Playwright test coverage}
+            \resumeItemListEnd
 
       \resumeSubHeadingListEnd
 
 
 %-----------SKILLS-----------
-\section{Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: C++, C\#, Python, Java, JavaScript, TypeScript, SQL} \\
-     \textbf{Frameworks \& Libraries}{: React, Redux, Next.js, Node.js, Express, Mongoose, GraphQL, Prisma, Socket.io} \\
-     \textbf{Web \& Databases}{: Tailwind CSS, RESTful APIs, WebSockets, MongoDB, PostgreSQL, SQLite, Redis} \\
-     \textbf{DevOps}{: Docker, Nginx, Kubernetes, AWS (EC2, RDS, S3), Google Cloud (GKE), CI/CD (GitHub Actions, Travis CI)} \\
-     \textbf{Embedded \& CV}{: Raspberry Pi, MAVLink, UDP Streaming, OpenCV, YOLOv8} \\
-     \textbf{Spoken}{: Arabic (Native), English (Fluent)}
-    }}
- \end{itemize}
+
+  \section{Skills}
+   \begin{itemize}[leftmargin=0.15in, label={}]
+      \small{\item{
+       \textbf{Languages}{: C++, C\#, Python, Java, JavaScript, TypeScript, SQL} \\
+       \textbf{Frameworks \& Libraries}{: React, Redux, Next.js, Node.js, Express, Vite, Mongoose, GraphQL, Prisma, Socket.io} \\
+       \textbf{Web \& Databases}{: Tailwind CSS, RESTful APIs, WebSockets, MongoDB, PostgreSQL, SQLite, Redis} \\
+       \textbf{Testing}{: Vitest, Playwright, Jest} \\
+       \textbf{AI Tooling}{: Claude Code, Multi-agent Orchestration, Prompt Engineering, LLM Integration} \\
+       \textbf{DevOps}{: Docker, Nginx, Kubernetes, AWS (EC2, RDS, S3), Google Cloud (GKE), CI/CD (GitHub Actions, Travis CI)} \\
+       \textbf{Embedded \& CV}{: Raspberry Pi, MAVLink, UDP Streaming, OpenCV, YOLOv8} \\
+       \textbf{Spoken}{: Arabic (Native), English (Fluent)}
+      }}
+   \end{itemize}
 
 \end{document}
