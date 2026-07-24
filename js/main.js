@@ -90,7 +90,7 @@ function onScroll() {
   } else {
     navbar.classList.remove('scrolled');
   }
-  if (toTop) toTop.classList.toggle('visible', window.scrollY > window.innerHeight);
+  if (toTop) toTop.classList.toggle('visible', window.scrollY > 500);
   updateProgress();
 }
 
