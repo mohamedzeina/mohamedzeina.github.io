@@ -100,7 +100,7 @@
       {Embedded Systems \& Full Stack Software Engineer (Contract)}{August 2025 -- Apr. 2026}
       {Energco, ZAIM Teknopark}{Istanbul, TR}
       \resumeItemListStart
-        \resumeItem{Built a multi-drone system coordinating 5 UAVs with real-time 30 FPS video streaming, live telemetry via WebSockets, and fault-tolerant reconnection and failsafe handling}
+        \resumeItem{Sole developer of the entire full-stack system: architected, built, and deployed the complete backend and frontend for a multi-drone platform coordinating 5 UAVs with real-time 30 FPS video streaming, live telemetry via WebSockets, and fault-tolerant reconnection and failsafe handling}
         \resumeItem{Developed a Ground Control Station using React and Python FastAPI with real-time map interface, manual flight controls, and remote GPS navigation}
         \resumeItem{Implemented YOLOv8 object detection with PID-controlled flight for real-time subject tracking; calculated target GPS from gimbal angles, GPS, and rangefinder data to autonomously dispatch mini drones}
         \resumeItem{Configured bridged wireless network between GCS and drones; set up embedded Linux on Raspberry Pi for video streaming and MAVLink communication}
@@ -142,73 +142,61 @@
   \resumeSubHeadingListEnd
 
  %-----------PROJECTS-----------
-  \section{Projects}
+  %-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
 
-      \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\href{https://noblecart.onrender.com}{\textbf{\uline{Noblecart}}} $|$
+  \href{https://github.com/mohamedzeina/noblecart}{\uline{GitHub}} $|$ \emph{Node.js, Express.js, MongoDB, EJS, Three.js, Stripe, Cloudinary}}{}
+      \resumeItemListStart
+        \resumeItem{Built a full-stack MVC e-commerce app with session auth (bcrypt, CSRF, Helmet hardening), role-scoped admin controls, and Cloudinary storage for images and GLB 3D models}
+        \resumeItem{Implemented an interactive Three.js 3D product viewer, a slide-out cart drawer with live quantity controls via Fetch API, Stripe Checkout payments, and server-side PDF invoice generation with PDFKit}
+      \resumeItemListEnd
 
-        \resumeProjectHeading
-          {\href{https://noblecart.onrender.com}{\textbf{\uline{Noblecart}}} $|$
-  \href{https://github.com/mohamedzeina/noblecart}{\uline{GitHub}} $|$ \emph{Node.js, Express.js, MongoDB, EJS, Three.js, Stripe, Cloudinary,
-  PDFKit}}{}
-          \resumeItemListStart
-            \resumeItem{Built a full-stack MVC e-commerce app with session-based auth, bcrypt password hashing, CSRF protection, Helmet security
-   headers, and role-scoped admin controls with Cloudinary image and GLB 3D model storage}
-            \resumeItem{Implemented an interactive Three.js 3D product viewer with OrbitControls, a slide-out cart drawer with live quantity
-  controls and badge updates via Fetch API, Stripe Checkout for payments, and server-side PDF invoice generation with PDFKit}
-          \resumeItemListEnd
+    \resumeProjectHeading
+      {\href{https://hearsay-community.vercel.app}{\textbf{\uline{Hearsay}}} $|$
+  \href{https://github.com/mohamedzeina/hearsay}{\uline{GitHub}} $|$ \emph{Next.js, TypeScript, PostgreSQL, NextAuth, Tailwind, Prisma, Zod}}{}
+      \resumeItemListStart
+        \resumeItem{Built a full-stack threaded discussion app with GitHub OAuth, recursively nested comments with reply-aware delete logic, live typeahead search, and authorization-checked, Zod-validated mutations}
+        \resumeItem{Architected on the Next.js App Router with React Server Components and Suspense streaming for parallel post/comment/sidebar loading, React \texttt{cache()} for per-render query deduplication, and a custom Tailwind design system}
+      \resumeItemListEnd
 
+    \resumeProjectHeading
+      {\href{https://dispatches-three.vercel.app}{\textbf{\uline{Dispatches}}} $|$
+  \href{https://github.com/mohamedzeina/dispatches}{\uline{GitHub}} $|$ \emph{Node.js, Express.js, MongoDB, GraphQL, JWT, Cloudinary, React}}{}
+      \resumeItemListStart
+        \resumeItem{Built a GraphQL API (Express, Mongoose) with per-resolver JWT authorization (1h expiry, bcrypt hashing), server-side validation, paginated feeds, ownership-enforced post CRUD, idempotent likes via \texttt{\$addToSet}/\texttt{\$pull}, and Multer + Cloudinary image uploads}
+        \resumeItem{Modeled recursively nested comment threads as an indexed adjacency list with BFS cascade-delete; built a React optimistic-UI layer (likes and comments reconcile against the server with rollback and swap-stable keys) and a modal-as-route post view that syncs counts across feed and profile without refetching}
+      \resumeItemListEnd
 
-       \resumeProjectHeading
-          {\href{https://hearsay-community.vercel.app}{\textbf{\uline{Hearsay}}} $|$
-  \href{https://github.com/mohamedzeina/hearsay}{\uline{GitHub}} $|$ \emph{Next.js, TypeScript, PostgreSQL, NextAuth, NextUI, Tailwind, Prisma,
-  Zod}}{}
-          \resumeItemListStart
-            \resumeItem{Built a full-stack threaded discussion app with GitHub OAuth, topic-scoped posts, recursively nested comments with
-  reply-aware delete logic, live typeahead search across topics and posts, and authorization-checked Zod-validated mutations}
-            \resumeItem{Architected on Next.js App Router with React Server Components and Suspense streaming for parallel post/comment/sidebar
-  loading, React \texttt{cache()} for per-render query deduplication, and a custom Tailwind design system with deterministic slug-hashed topic
-  theming and shared primitives (\texttt{PostCard}, \texttt{SurfacePanel}, \texttt{ThreadMap})}
-          \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{{JSNote}} $|$ \href{https://github.com/mohamedzeina/jsnote-zeina}{\uline{GitHub}} $|$ \emph{React, TypeScript, Vite, esbuild-wasm, Monaco, Redux, npm workspaces}}{}
+      \resumeItemListStart
+        \resumeItem{Published \texttt{jsnote-zeina} to npm as a CLI-distributed in-browser JS/JSX notebook with Monaco IntelliSense via \texttt{@typescript/ata}, esbuild-wasm bundling with unpkg resolution, sandboxed iframe execution, and cumulative cell scope sharing}
+        \resumeItem{Architected as a three-package npm workspace with Redux/Immer state, debounced persistence, and runtime-error cell attribution via source-map-js, covered by Vitest and Playwright}
+      \resumeItemListEnd
 
-        \resumeProjectHeading
-          {\href{https://node-social-chi.vercel.app}{\textbf{\uline{Node Social}}} $|$
-  \href{https://github.com/mohamedzeina/NodeSocial}{\uline{GitHub}} $|$ \emph{Node.js, Express.js, MongoDB, GraphQL, JWT, Cloudinary, React}}{}
-          \resumeItemListStart
-            \resumeItem{Built a GraphQL API with JWT authentication, server-side input validation, paginated post feeds, and image upload via
-  Multer and Cloudinary}
-            \resumeItem{Implemented ownership-enforced CRUD mutations, time-limited tokens with automatic client-side expiry, and real-time
-  communication with Socket.io}
-          \resumeItemListEnd
-
- 
-
-      \resumeProjectHeading
-            {\textbf{{JSNote}} $|$ \href{https://github.com/mohamedzeina/jsnote-zeina}{\uline{GitHub}} $|$ \emph{React, TypeScript, Vite, esbuild-wasm, Monaco,
-  Redux, Immer, Express, npm workspaces}}{}
-            \resumeItemListStart
-              \resumeItem{Published \texttt{jsnote-zeina} to npm as a CLI-distributed in-browser JS/JSX notebook with Monaco IntelliSense via
-  \texttt{@typescript/ata}, esbuild-wasm bundling with unpkg npm resolution, sandboxed iframe execution, and cumulative cell scope sharing}
-              \resumeItem{Architected as a three-package npm workspace with Redux/Immer state, debounced persistence, multi-notebook directory mode,
-  find/replace, pinned cells, runtime-error cell attribution via source-map-js, and Vitest + Playwright test coverage}
-            \resumeItemListEnd
-
-      \resumeSubHeadingListEnd
+  \resumeSubHeadingListEnd
 
 
-%-----------SKILLS-----------
 
+ %-----------SKILLS-----------
   \section{Skills}
    \begin{itemize}[leftmargin=0.15in, label={}]
       \small{\item{
        \textbf{Languages}{: C++, C\#, Python, Java, JavaScript, TypeScript, SQL} \\
-       \textbf{Frameworks \& Libraries}{: React, Redux, Next.js, Node.js, Express, Vite, Mongoose, GraphQL, Prisma, Socket.io} \\
-       \textbf{Web \& Databases}{: Tailwind CSS, RESTful APIs, WebSockets, MongoDB, PostgreSQL, SQLite, Redis} \\
+       \textbf{Frontend}{: React, Redux, Next.js, Tailwind CSS, Three.js, Vite} \\
+       \textbf{Backend \& APIs}{: Node.js, Express, FastAPI, GraphQL, RESTful APIs, WebSockets, NATS, Microservices, JWT, Stripe} \\
+       \textbf{Databases \& ORMs}{: MongoDB, PostgreSQL, Redis, Mongoose, Prisma} \\
+       \textbf{DevOps \& Cloud}{: Docker, Nginx, Kubernetes, AWS (EC2, RDS, S3), Google Cloud (GKE), CI/CD (GitHub Actions, Travis CI)} \\
        \textbf{Testing}{: Vitest, Playwright, Jest} \\
-       \textbf{AI Tooling}{: Claude Code, Multi-agent Orchestration, Prompt Engineering, LLM Integration} \\
-       \textbf{DevOps}{: Docker, Nginx, Kubernetes, AWS (EC2, RDS, S3), Google Cloud (GKE), CI/CD (GitHub Actions, Travis CI)} \\
+       \textbf{AI \& LLMs}{: Claude Code, Multi-agent Orchestration, Prompt Engineering, LLM Integration} \\
        \textbf{Embedded \& Computer Vision}{: Raspberry Pi, MAVLink, UDP Streaming, OpenCV, YOLOv8} \\
        \textbf{Spoken}{: Arabic (Native), English (Fluent)}
       }}
    \end{itemize}
+
+
 
 \end{document}
