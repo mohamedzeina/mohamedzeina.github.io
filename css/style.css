@@ -158,7 +158,7 @@ body.cursor-hover .cursor-ring {
 }
 
 .section {
-  padding: 110px 0 100px;
+  padding: 76px 0 70px;
   position: relative;
 }
 
@@ -425,8 +425,8 @@ body.cursor-hover .cursor-ring {
   grid-template-columns: auto 1fr;
   gap: 1.5rem;
   align-items: center;
-  margin-bottom: 4rem;
-  padding-bottom: 1rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 0.9rem;
   border-bottom: 1px solid var(--border);
 }
 .sec-index {
@@ -799,12 +799,51 @@ body.cursor-hover .cursor-ring {
 }
 
 /* ═══════════════════════════════════════════════════
+   BACK TO TOP
+═══════════════════════════════════════════════════ */
+.to-top {
+  position: fixed;
+  right: 1.75rem;
+  bottom: 1.75rem;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.6rem 0.85rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity var(--transition), transform var(--transition),
+              visibility var(--transition), color var(--transition),
+              border-color var(--transition), box-shadow var(--transition);
+}
+.to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.to-top:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 3px 3px 0 var(--border-hot);
+  transform: translate(-2px, -2px);
+}
+.to-top i { font-size: 0.8rem; }
+
+/* ═══════════════════════════════════════════════════
    SECTION BREAK DIVIDER
 ═══════════════════════════════════════════════════ */
 .sec-break {
   max-width: var(--max-width);
-  margin: 1.5rem auto 0;
-  padding: 1.5rem 2rem 0;
+  margin: 0.5rem auto 0;
+  padding: 0.5rem 2rem 0;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -837,7 +876,7 @@ body.cursor-hover .cursor-ring {
    STATS STRIP
 ═══════════════════════════════════════════════════ */
 .stats {
-  padding: 4.5rem 0;
+  padding: 3rem 0;
   background: var(--bg);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
@@ -1537,8 +1576,8 @@ body.cursor-hover .cursor-ring {
   .nav-container { padding: 0 1rem; }
   .container { padding: 0 1.25rem; }
 
-  .section { padding: 80px 0; }
-  .sec-head { gap: 1rem; }
+  .section { padding: 58px 0; }
+  .sec-head { gap: 1rem; margin-bottom: 2rem; }
   .sec-index { font-size: clamp(3rem, 14vw, 5rem); }
 
   /* nav mobile */

@@ -70,6 +70,15 @@ function updateProgress() {
 }
 
 
+/* ─── back to top ────────────────────────────────── */
+const toTop = document.getElementById('to-top');
+if (toTop) {
+  toTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
+  });
+}
+
+
 /* ─── navbar scroll behaviour + scroll progress ──── */
 const navbar = document.getElementById('navbar');
 const navLinksAll = document.querySelectorAll('.nav-links li a:not(.btn-resume)');
@@ -81,6 +90,7 @@ function onScroll() {
   } else {
     navbar.classList.remove('scrolled');
   }
+  if (toTop) toTop.classList.toggle('visible', window.scrollY > window.innerHeight);
   updateProgress();
 }
 
